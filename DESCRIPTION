@@ -1,0 +1,21 @@
+Package: vault
+Type: Package
+Title: vault (https://github.com/avantoss/vaultR)
+Description: Simple accessors for Hashicorp's vault in R
+Version: 0.1.0
+Author: Juan Arroyo <juan.arroyo@avant.com>
+Maintainer: Juan Arroyo <juan.arroyo@avant.com>
+Authors@R: c(person("Juan", "Arroyo",
+    email = "juan.arroyo@avant.com", role = c("aut", "cre")))
+Depends:
+    R (>= 3.0.1)
+License: MIT
+LazyData: true
+Imports:
+    stringr
+Suggests:
+    knitr,
+    microbenchmark,
+    testthat
+Roxygen: list(wrap = FALSE)
+RoxygenNote: 6.0.1
