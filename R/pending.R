@@ -5,6 +5,8 @@ pending <- function(a) {
 
 #' @export
 vault.read <- function(key, mode = "text") {
-  system2("vault", c("read", key))
-}
+  secret_output <- system2("vault", c("read", "-format=json", key), stdout = TRUE)
+  value <- fromJSON(secret_output)$data$value
+  value
 
+}
