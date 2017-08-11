@@ -2,7 +2,7 @@ ensure_environment_variables_are_set <- function() {
   if (is.null(Sys.getenv("VAULT_CACERT") %|||% getOption("vault.cacert"))) {
     stop("Please set VAULT_CACERT env var or vault.cacert global option.")
   }
-  if (is.null(Sys.getenv("VAULT_ADDR") %||% getOption("vault.addr"))) {
+  if (is.null(Sys.getenv("VAULT_ADDR") %|||% getOption("vault.addr"))) {
     stop("Please set VAULT_ADDR env var or vault.addr global option.")
   }
 }
