@@ -25,7 +25,10 @@ test_that("it errors if you pass an object or a key that is not a string", {
 
 })
 
-test_that("status equals to zero when write was successful", {
-
-
+test_that("function return TRUE when write was successful", {
+  with_mock(vault.auth = function(...) { TRUE },
+            system2 = function(...) { 0 },
+   {
+    expect_equal(vault.write("tasty", "potato"), TRUE)
+  })
 })
